@@ -26,12 +26,17 @@ end
 
 bot.command :player do |event, name|
   response = get_player_info(name)
-  "This is what I found \n#{response}"
+  "from hotslogs.com: \n#{response}"
 end
 
 bot.command :team do |event, p1, p2, p3, p4, p5|
   response = get_team_info(p1, p2, p3, p4, p5)
-  "This is what I found \n#{response}"
+  "From hotslogs.com: \n#{response}"
+end
+
+bot.command :hero do |event, hero|
+  response = get_hero_info(hero)
+  "From masterleague.net: \n#{response}"
 end
 
 bot.run
